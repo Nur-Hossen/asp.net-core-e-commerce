@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebApp.Models.User>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            Email
+        </tr>
+        <tr>
+            Password
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var item in Model)
+            {
+                <td>@item.Email</td>
+                <td>@item.CreatedAt.ToString("dd-MM-yyyy")</td>
+            }
+        </tr>
+    </tbody>
+</table>
