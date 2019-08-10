@@ -1,11 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebApp.Models;
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace WebApp
+
+
+namespace Business
 {
     public class DataContext : DbContext
     {

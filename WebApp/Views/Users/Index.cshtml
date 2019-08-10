@@ -1,9 +1,12 @@
-﻿@model IEnumerable<WebApp.Models.User>
+﻿@model IEnumerable<Entities.User>
 
 @{
     ViewData["Title"] = "Users";
 }
 
+<div>
+    <a asp-page="/Create">Create</a>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -14,12 +17,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            @foreach (var item in Model)
-            {
+        @foreach (var item in Model)
+        {
+            <tr>
+
                 <td>@item.Email</td>
-                <td>@item.CreatedAt.ToString("dd-MM-yyyy")</td>
-            }
-        </tr>
+                <td>@item.CreatedAt.Value.ToString("dd-MM-yyyy")</td>
+            </tr>
+        }
+
     </tbody>
 </table>
